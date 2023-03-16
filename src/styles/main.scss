@@ -1,0 +1,102 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Viga&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Viga', sans-serif;
+    margin: 0;
+}
+
+.logo {
+    width: 200px;
+    height: 300px;
+}
+
+.content h3 {
+    font-size: 1.5em;
+}
+
+.nav-link.active{
+  color: crimson !important; 
+}
+
+#hero {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and ( max-width: 576px ) {
+    #hero{
+        width: 100%;
+        height: auto;
+    }
+
+    #about {
+      width: 100%;
+      height: auto;
+    }
+
+}
+
+@media screen and ( max-width: 767px ) {
+    .content {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
+@media screen and ( max-width: 992px ) {
+  .profil {
+    order: 2;
+  }
+
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
