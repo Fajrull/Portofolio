@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import "aos/dist/aos.css";
 
 *,
 *::before,
@@ -11,7 +12,7 @@
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Viga", sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0;
 }
 
@@ -32,65 +33,37 @@ body {
   align-items: center;
 }
 
-#about {
-  width: 100%;
-  height: 88vh;
+h1 {
+  font-weight: bold;
 }
 
-h3 {
-  font-size: 16px;
-  font-weight: 700;
-  font-family: sans-serif;
-  font-size: 100px;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
+.skill {
+  color: lightgray;
+  background-color: #0a2647;
+}
+
+#element {
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(
+    90deg,
+    rgba(65, 88, 208, 1) 0%,
+    rgba(200, 80, 192, 1) 46%,
+    rgba(255, 204, 112, 1) 100%
   );
   -webkit-background-clip: text;
   color: transparent;
 }
 
 p {
-  font-family: sans-serif;
   font-size: 16px;
-  font-family: "Quicksand", sans-serif;
 }
 
-.darkmode {
-  padding: 16px;
-  margin-left: 1.8rem !important;
-}
-
-@media screen and (max-width: 576px) {
-  #hero {
-    width: 100%;
-    height: 100vh;
-    max-width: 90%;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .content {
-    order: 2;
-    margin-top: 20px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .profil {
-    order: 2;
-  }
-
-  #about {
-    width: 100%;
-    height: 100vh;
-    max-width: 90%;
-    margin: auto;
-  }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .wave {
@@ -99,6 +72,20 @@ p {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+}
+
+.tech {
+  width: 200px;
+  height: 160px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px,
+    rgba(0, 0, 0, 0.05) 0px 10px 15px -5px, rgba(0, 0, 0, 0.04) 0px 7px 7px -5px;
+  border-radius: 24px !important;
+  padding: 24px;
+}
+
+.card {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 @keyframes wave-animation {
@@ -125,5 +112,31 @@ p {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #skills {
+    margin: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    order: 2;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .profil {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .darkmode {
+    order: 2;
   }
 }
